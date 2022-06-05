@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const mongoose = require('../../database');
 
-const projetcSchema = new mongoose.Schema({
+const projectSchema = new mongoose.Schema({
     title: {
         type: String,
         require: true,
@@ -13,7 +13,7 @@ const projetcSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true,
+        required: false,
     },
     tasks: [{
         type: mongoose.Schema.Types.ObjectId,
